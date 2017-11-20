@@ -3,7 +3,7 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 
 gulp.task('sass',function(){
-		return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
+		return gulp.src(['src/bootstrap/scss/bootstrap.scss','src/scss/*.scss'])
 		.pipe(sass())
 		.pipe(gulp.dest("src/css"))
 		.pipe(browserSync.stream());
@@ -11,7 +11,7 @@ gulp.task('sass',function(){
 });
 //move the javascript files into /src/js folder
 gulp.task('js',function(){
-return gulp.src(['node_modules/bootstrap/scss/bootstrap.min.js','node_modules/jquery/dist/jquery.min.js','node_modules/tether/dist/js/tether.min.js'])
+return gulp.src(['src/bootstrap/scss/bootstrap.min.js','node_modules/jquery/dist/jquery.min.js','node_modules/tether/dist/js/tether.min.js'])
 		
 		.pipe(gulp.dest("src/js"))
 		.pipe(browserSync.stream());
@@ -25,7 +25,7 @@ browserSync.init({
 	server: "./src"
 });
 
-gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass']);
+gulp.watch(['src/bootstrap/scss/bootstrap.scss','src/scss/*.scss'],['sass']);
 gulp.watch("src/*.html").on('change',browserSync.reload);
 });
 
