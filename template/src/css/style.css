@@ -2,7 +2,7 @@ body {
   color: #fff; }
 
 #hero {
-  background: url("/assets/img.jpg") no-repeat;
+  background: url("../assets/img.jpg") no-repeat;
   background-size: cover;
   background-position: 0 60%; }
 
@@ -40,11 +40,11 @@ h3 {
   color: #000; }
 
 #join-container {
-  background: url("/assets/header.jpg") no-repeat;
+  background: url("../assets/header.jpg") no-repeat;
   background-size: cover; }
 
 #join-containers {
-  background: url("/assets/grad.jpg") no-repeat;
+  background: url("../assets/grad.jpg") no-repeat;
   background-size: cover; }
 
 h2 {
